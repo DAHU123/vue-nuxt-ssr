@@ -1,11 +1,42 @@
 <template>
   <div>
+    <div class="container">
+      <div class="wrap-title">
+        <div class="sub">
+          <nuxt-link to="/">首页</nuxt-link>
+        </div>
+        <div class="sub">
+          <nuxt-link to="/news">新闻</nuxt-link>
+        </div>
+        <div class="sub">
+          <nuxt-link to="/product">产品中心</nuxt-link>
+        </div>
+        <div class="sub">
+          <nuxt-link to="/partner">合伙人</nuxt-link>
+        </div>
+      </div>
+    </div>
     <Nuxt />
   </div>
 </template>
 
-<style>
-html {
+<style lang="scss">
+  .container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .wrap-title {
+    display: flex;
+    justify-content: flex-start;
+    .sub {
+      padding: 20px;
+      color: $color;
+      cursor: $cursor-p;
+    }
+  }
+
+  html {
   font-family:
     'Source Sans Pro',
     -apple-system,

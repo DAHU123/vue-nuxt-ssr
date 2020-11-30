@@ -1,0 +1,8 @@
+$color: red;
+$cursor-p: pointer;
+.test-enter-active, .test-leave-active {
+  transition: opacity .5s;
+}
+.test-enter, .test-leave-active {
+  opacity: 0;
+}
