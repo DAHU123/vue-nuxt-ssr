@@ -18,6 +18,12 @@ module.exports = {
   rules: {
     semi: [2, "never"],
     "no-console": "off",
+    "vue/singleline-html-element-content-newline": "off",
+    "vue/html-closing-bracket-spacing": "off",
+    "vue/order-in-components": "off",
+    "vue/html-self-closing": "off",
+    "no-debugger": "off",
+    "vue/require-prop-types": "off",
     "vue/max-attributes-per-line": "off",
     "prettier/prettier": ["warn", { semi: false }],
   },

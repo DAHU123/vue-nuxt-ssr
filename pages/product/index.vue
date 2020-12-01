@@ -3,12 +3,12 @@
     产品中心对应的页面
     <el-button type="primary" @click="handleClick"> 哈哈哈 </el-button>
     <ul>
-      <li v-for="todo in todos">
-        <input type="checkbox" :checked="todo.done" @change="toggle(todo)" >
+      <li v-for="(todo, indx) in todos" :key="indx">
+        <input type="checkbox" :checked="todo.done" @change="toggle(todo)" />
         <span :class="{ done: todo.done }">{{ todo.text }}</span>
       </li>
       <li>
-        <input placeholder="What needs to be done?" @keyup.enter="addTodo" >
+        <input placeholder="What needs to be done?" @keyup.enter="addTodo" />
       </li>
     </ul>
   </div>

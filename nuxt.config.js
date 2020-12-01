@@ -58,7 +58,7 @@ export default {
       // Run ESLint on save
       console.log(ctx)
       if (ctx.isDev && ctx.isClient) {
-        config.devtool = "#source-map"
+        config.devtool = "eval-source-map"
         config.module.rules.push({
           enforce: "pre",
           test: /\.(js|vue)$/,
