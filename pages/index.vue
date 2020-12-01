@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Hello, {{name}}</h1>
+    <h1 class="red">Hello, {{name}}</h1>
     <div v-for="(item, index) in arr" :key="index">
       {{item.name}}
     </div>
@@ -41,12 +41,11 @@
         ]
       }
     },
-    // mounted() {
-    //   this.$axios.post('/edu-cms-web-api/v1/list-all-categories-in-site').then(res => {
-    //     // JSON.parse(res)
-    //     console.log(res.data);
-    //     this.arr = res.data.data
-    //   })
-    // }
   }
 </script>
+
+<style scoped lang="scss">
+  .red{
+    color: red;
+  }
+</style>
