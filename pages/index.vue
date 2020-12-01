@@ -18,7 +18,6 @@ export default {
       .then((res) => {
         // JSON.parse(res)
         // console.log(res.data);
-        debugger
         return { name: "美女", arr: res?.data?.data || [] }
       })
   },
@@ -41,7 +40,6 @@ export default {
   },
   methods: {
     handleClick() {
-      debugger
       this.$myInjectedFunction("哈哈哈！")
     },
   },

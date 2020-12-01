@@ -49,14 +49,15 @@ export default {
   styleResources: {
     scss: "~assets/css/main.scss",
   },
-
+  loading: {
+    color: 'red',
+    height: '5px'
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     analyze: true,
     transpile: [/^element-ui/],
     extend(config, ctx) {
-      // Run ESLint on save
-      console.log(ctx)
       if (ctx.isDev && ctx.isClient) {
         config.devtool = "eval-source-map"
         config.module.rules.push({
