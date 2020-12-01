@@ -3,16 +3,16 @@
     <div class="container">
       <div class="wrap-title">
         <div class="sub">
-          <nuxt-link to="/">首页</nuxt-link>
+          <nuxt-link to="/"> 首页 </nuxt-link>
         </div>
         <div class="sub">
-          <nuxt-link to="/news">新闻</nuxt-link>
+          <nuxt-link to="/news"> 新闻 </nuxt-link>
         </div>
         <div class="sub">
-          <nuxt-link to="/product">产品中心</nuxt-link>
+          <nuxt-link to="/product"> 产品中心 </nuxt-link>
         </div>
         <div class="sub">
-          <nuxt-link to="/partner">合伙人</nuxt-link>
+          <nuxt-link to="/partner"> 合伙人 </nuxt-link>
         </div>
       </div>
     </div>
@@ -21,31 +21,24 @@
 </template>
 
 <style lang="scss">
-  .container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.wrap-title {
+  display: flex;
+  justify-content: flex-start;
+  .sub {
+    padding: 20px;
+    color: $color;
+    cursor: $cursor-p;
   }
-  .wrap-title {
-    display: flex;
-    justify-content: flex-start;
-    .sub {
-      padding: 20px;
-      color: $color;
-      cursor: $cursor-p;
-    }
-  }
+}
 
-  html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+html {
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

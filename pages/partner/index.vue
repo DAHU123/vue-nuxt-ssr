@@ -1,15 +1,13 @@
 <template>
-    <div>合伙人对应的页面</div>
+  <div>合伙人对应的页面</div>
 </template>
 
 <script>
-  export default {
-    transition: 'test',
-    layout: 'blog',
-    name: "index"
-  }
+export default {
+  name: "Index",
+  layout: "blog",
+  transition: "test",
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
