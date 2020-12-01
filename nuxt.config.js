@@ -58,10 +58,13 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    analyze: true,
     transpile: [/^element-ui/],
     extend(config, ctx) {
       // Run ESLint on save
+      console.log(ctx);
       if (ctx.isDev && ctx.isClient) {
+        config.devtool = '#source-map'
         config.module.rules.push({
           enforce: "pre",
           test: /\.(js|vue)$/,

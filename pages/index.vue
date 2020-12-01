@@ -21,11 +21,13 @@
       return $axios.post('/edu-cms-web-api/v1/list-all-categories-in-site').then(res => {
         // JSON.parse(res)
         // console.log(res.data);
+        debugger
         return { name: '美女', arr: res?.data?.data || [] }
       })
     },
     methods: {
       handleClick(){
+        debugger
         this.$myInjectedFunction('哈哈哈！')
       }
     },
