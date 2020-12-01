@@ -20,7 +20,12 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    '@/plugins/axios',
+    '~/plugins/vue-inject.js',
+    '~/plugins/ctx-inject.js',
+    '~/plugins/combined-inject.js',
+    { src: '~/plugins/vue-notifications', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -32,8 +37,20 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios'
   ],
+
+  axios: {
+    proxy: true, //开启代理转发
+  },
+
+  // 代理转发
+  proxy: {
+    '/edu-cms-web-api': {
+      target: 'https://api.hetaobiancheng.com',
+    },
+  },
 
   styleResources: {
     scss: '~assets/css/main.scss'
